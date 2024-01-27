@@ -5,6 +5,14 @@ from csv_convert import write_to_csv;
 from csv_convert import write_to_csv_triple;
 
 I = [1, 6, 5, 4];
+II = [3, 5, 6, 1];
+III = [2, 4, 6, 5];
+IV = [4, 3, 6, 5];
+V = [1, 6, 3, 5];
+VI = [6, 4, 5, 1];
+VII = [6, 5, 1, 2]; 
+
+
 
 def gen_note(root):
     return (root + random.choice([0, 2, 4]) + 7 * random.choice([3, 4]));
@@ -40,6 +48,6 @@ def gen_list_progs(amount, root_prog, filename):
 
     write_to_csv_triple(list_root_progs, list_chord_progs, list_validations, filename);
 
-gen_list_progs(5000, I, "rng_good.csv");
+gen_list_progs(100, VI, "rng_good.csv");
 
 
