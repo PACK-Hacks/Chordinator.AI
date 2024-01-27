@@ -13,14 +13,21 @@ def validity_function(base_notes, chord_progression):
                 base_multiple_array.append(True)
             else:
                 base_multiple_array.append(False)
-    if (False in validity_array):
+    sub1_1 = validity_array[0:4]
+    sub1_2 = validity_array[4:8]
+    sub1_3 = validity_array[8:12]
+    sub1_4 = validity_array[12:16]
+    sub2_1 = base_multiple_array[0:4]
+    sub2_2 = base_multiple_array[4:8]
+    sub2_3 = base_multiple_array[8:12]
+    sub2_4 = base_multiple_array[12:16]
+    if (False in sub1_1 or False in sub1_2 or False in sub1_3 or False in sub1_4):
         return False
-    elif (True in base_multiple_array):
+    elif (True in sub2_1 and True in sub2_2 and True in sub2_3 and True in sub2_4):
         return True
     else:
         return False
     
 
 
-    
 
