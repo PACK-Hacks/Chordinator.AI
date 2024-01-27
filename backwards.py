@@ -5,7 +5,7 @@ from music21 import *;
 from conversion import note_to_number;
 from csv_convert import write_to_csv;
 
-sample = [[29, 31, 33, 22], [34, 31, 27, 38], [26, 35, 33, 28], [29, 27, 25, 34]];
+sample = [[29, 26, 31, 22], [29, 31, 34, 36], [35, 26, 37, 30], [29, 34, 36, 27]];
 
 note_mapping = {
         "C0" : 1, "D0" : 2, "E0" : 3, "F0" : 4, "G0" : 5, "A1" : 6, "B1" : 7,

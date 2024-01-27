@@ -7,12 +7,12 @@ from csv_convert import write_to_csv_triple;
 I = [1, 6, 5, 4];
 
 def gen_note(root):
-    return (root + random.choice([0, 2, 4]) + 7 * random.choice([4]));
+    return (root + random.choice([0, 2, 4]) + 7 * random.choice([3, 4]));
 
 def gen_chord(root):
-    chord = [];
+    chord = [root + 7 * 3];
     i = 0;
-    while(i < 4):
+    while(i < 3):
         temp_note = gen_note(root);
         if (temp_note in chord):
             continue;
@@ -39,6 +39,7 @@ def gen_list_progs(amount, root_prog, filename):
         list_validations.append(validity_function(root_prog, temp_chord_prog)); 
 
     write_to_csv_triple(list_root_progs, list_chord_progs, list_validations, filename);
-print("Bruh")
-gen_list_progs(10, I, "rng_good.csv");
+
+gen_list_progs(5000, I, "rng_good.csv");
+
 
