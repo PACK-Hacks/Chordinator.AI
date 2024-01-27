@@ -14,7 +14,7 @@ def process_name(s):
 
 def roman_to_int(roman_string):
     # Dictionary mapping Roman numerals to their integer values
-    roman_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    roman_dict = {'I': 1, 'V': 5}
 
     # Split the string into individual Roman numerals
     roman_numerals = roman_string.split()
@@ -34,8 +34,6 @@ def roman_to_int(roman_string):
         integer_values.append(integer)
 
     return integer_values
-
-
 
 progressions = [];
 progression_names = [];
