@@ -42,11 +42,8 @@ def read_csv_file(file_path):
         data = list(csv_reader)
         return data
 
-csv_file_path = '/Users/parthpatel/Desktop/UofTHacks11/Chordinator.AI/output.csv'
+csv_file_path = 'output.csv'
 csv_data = read_csv_file(csv_file_path)
-
-
-
 
 processed_data = process_csv_data(csv_data)
 

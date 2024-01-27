@@ -4,6 +4,7 @@ import mido;
 from music21 import *;
 from conversion import note_to_number;
 from csv_convert import write_to_csv;
+from validity_function import valid_all;
 
 
 def process_name(s):
@@ -72,4 +73,5 @@ for filename in os.listdir('midi'):
     
         progressions.append(pro_chords);
 
+valid_all(list(zip(progression_names, progressions)));
 print(write_to_csv(progression_names, progressions, "output.csv"));
