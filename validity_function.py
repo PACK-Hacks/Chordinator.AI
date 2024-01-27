@@ -21,6 +21,6 @@ def validity_function(base_notes, chord_progression):
         return False
     
 
-print(validity_function([1, 5, 4, 6], [[26, 24, 22, 15],[30, 21, 26, 19],[29, 20, 25, 18],[31, 29, 20, 13]]))
+
     
 
