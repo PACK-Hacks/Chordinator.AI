@@ -7,6 +7,7 @@ def note_to_number(note):
         "C3" : 22, "D3" : 23, "E3" : 24, "F3" : 25, "G3" : 26, "A4" : 27, "B4" : 28,
         "C4" : 29, "D4" : 30, "E4" : 31, "F4" : 32, "G4" : 33, "A5" : 34, "B5" : 35,
         "C5" : 36, "D5" : 37, "E5" : 38, "F5" : 39, "G5" : 40, "A6" : 41, "B6" : 42
+        
     }
 
     # Convert the note to uppercase for case-insensitivity
