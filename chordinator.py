@@ -1,3 +1,4 @@
+import os;
 import mido;
 from music21 import *;
 
@@ -11,8 +12,20 @@ for element in midi.recurse():
         chords.append(element);
 
 
-for chord in chords:
-    ()    
 
-print(chords);
-print(chords[0][0].nameWithOctave);
+
+
+
+pro_chords = [];
+
+for i in range(len(chords)):
+    pro_chord = [];
+    
+    for j in range(len(chords[i])):
+        pro_chord.append(chords[i][j].nameWithOctave);
+    
+    pro_chords.append(pro_chord);
+
+
+print(chords, "\n");
+print(pro_chords)
