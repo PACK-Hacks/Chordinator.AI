@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Piano, KeyboardShortcuts, MidiNumbers } from 'react-piano';
 import 'react-piano/dist/styles.css';
+import Soundfont from 'soundfont-player';
 import DropdownMenu from './DropdownMenu';
+
 
 const Piano_Comp = ({ onKeyPress }) => {
     const [playedNotes, setPlayedNotes] = useState([]);
@@ -16,9 +18,14 @@ const Piano_Comp = ({ onKeyPress }) => {
   
         console.log(midiNumber)
 
+        Soundfont.instrument(new AudioContext(), 'acoustic_grand_piano').then(function (piano) {
+          piano.play(MidiNumbers.getAttributes(midiNumber).note)
+        })
+
         if (playedNotes.length === 3) {
           setIsPianoDisabled(true);
         }
+        console.log(midiNumber);
       }
     };
 
@@ -26,7 +33,7 @@ const Piano_Comp = ({ onKeyPress }) => {
       setIsPianoDisabled(false);
       setPlayedNotes([]);
     };
-   
+
     return (
       <div>
         <DropdownMenu />
