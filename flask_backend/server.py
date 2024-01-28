@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, send_file
 from validity_function import validity_function as vf
-from rng_good import utput_good_midi as midi_generator
+from rng_good import output_good_midi as midi_generator
 from note_to_num import note_to_num
 
 app = Flask(__name__)
