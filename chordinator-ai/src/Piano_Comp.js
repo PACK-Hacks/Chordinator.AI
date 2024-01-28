@@ -4,6 +4,8 @@ import 'react-piano/dist/styles.css';
 import Soundfont from 'soundfont-player';
 import DropdownMenu from './DropdownMenu';
 
+import './piano.css'; 
+
 
 const Piano_Comp = ({ onKeyPress }) => {
     const [playedNotes, setPlayedNotes] = useState([]);
@@ -49,7 +51,7 @@ const Piano_Comp = ({ onKeyPress }) => {
           keyboardShortcuts={null}
         />
         <div>
-          <p>Played Notes: {playedNotes.map((midiNumber) => MidiNumbers.getAttributes(midiNumber).note.replace(/\d/g, ''))}</p>
+          <p id="played_notes">Played Notes: {playedNotes.map((midiNumber) => MidiNumbers.getAttributes(midiNumber).note.replace(/\d/g, ''))}</p>
           <button onClick={handleGenerateChords}>Generate Chords</button>
         </div>
       </div>

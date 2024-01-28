@@ -29,18 +29,21 @@ function App() {
             Tone.Transport.start();
             
             // Synth Stuff /////////////////////////////////////////////////
-            const synth = new Tone.Synth({
+            const synth = new Tone.PolySynth(Tone.Synth, {
               oscillator: {
-                type: 'sine'
+                type: 'triangle'
               },
               envelope: {
-                attack: 0.5,
+                attack: 0.2,
                 decay: 0.2,
                 sustain: 0.5,
-                release: 1.5
-              }
+                release: 0.5
+              },
+              maxPolyphony: 5,
+               // This is an example; adjust as needed
             }).toDestination();
-          
+            
+
             // Define the reverb effect
             const reverb = new Tone.Reverb({
               decay: 2.5,
@@ -70,7 +73,7 @@ function App() {
       <h1>Input your four notes</h1>
       <Piano_Comp/>
 
-      <button onClick={playMidiFile} disabled={isPlaying}>
+      <button className="media" onClick={playMidiFile} disabled={isPlaying}>
         {isPlaying ? 'Playing...' : 'Play MIDI'}
       </button>
     </div>

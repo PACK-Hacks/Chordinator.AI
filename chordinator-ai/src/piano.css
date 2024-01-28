@@ -1,0 +1,35 @@
+.ReactPiano__Key--natural {
+    opacity: 0.9; /* Adjust this value as needed, 0 is fully transparent, 1 is fully opaque */
+    border-radius: 7px;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 10px #bebebee1, -5px -5px 10px #ffffffbe;
+
+}
+
+.ReactPiano__Key {
+    transition: all 0.2s ease;
+}
+
+.ReactPiano__Key:hover {
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  }
+
+.ReactPiano__Key:active {
+    filter: brightness(85%);
+    transform: scale(0.98);
+  }
+
+#played_notes {
+    color: white;
+    background-color: #3c3c3c; /* Light gray background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px 20px; /* Top/bottom and left/right padding */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+    margin: 10px; /* Optional: add some space around the bubble */
+    font-size: 16px; /* Optional: adjust the font size */
+    word-wrap: break-word; /* Ensures the text wraps inside the bubble */
+
+
+    
+}
+
