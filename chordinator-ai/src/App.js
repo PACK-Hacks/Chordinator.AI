@@ -5,12 +5,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
-      <div className="App">
-        <h1>Input your four notes</h1>
-        <Piano_Comp/>
-      </div>
+      <h1>Input your four notes</h1>
+      <Piano_Comp/>
     </div>
   );
 }
