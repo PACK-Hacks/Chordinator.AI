@@ -17,8 +17,8 @@ const DropdownMenu = () => {
         <option value="D Major">D Major</option>
         <option value="A Major">A Major</option>
         <option value="E Major">E Major</option>
-        <option value="B Major">B Major</option>
-        <option value="F# Major">F# Major</option>
+        <option value="B (Cb) Major">B (Cb) Major</option>
+        <option value="F# (Gb) Major">F# (Gb) Major</option>
         <option value="Db (C#) Major">Db (C#) Major</option>
         <option value="Ab Major">Ab Major</option>
         <option value="Eb Major">Eb Major</option>
