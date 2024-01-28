@@ -28,7 +28,7 @@ def notes():
     note4 = data.get('note4')
     note_array = [note1,note2,note3,note4]
     print('note_array loaded:', note_array)
-    note_array = [x%7 for x in note_array]
+    note_array = [x-47 for x in note_array]
     print("here is the real note array", note_array)
     
     midi = midi_generator(note_array)

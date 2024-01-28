@@ -18,7 +18,7 @@ function App() {
   const playMidiFile = () => {
     setIsPlaying(true);
     
-    fetch('/output.mid')
+    fetch('output2.mid')
       .then(response => response.arrayBuffer())
       .then(arrayBuffer => {
         const midi = new Midi(arrayBuffer);
