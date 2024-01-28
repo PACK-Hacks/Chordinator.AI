@@ -30,7 +30,7 @@ def notes():
     print('note_array loaded:', note_array)
     note_array = [x-47 for x in note_array]
     print("here is the real note array", note_array)
-    
+    midi_generator(note_array);
     midi = midi_generator(note_array)
     print(midi)
     print('running send file command')
