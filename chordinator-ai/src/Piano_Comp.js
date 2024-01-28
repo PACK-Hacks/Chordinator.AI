@@ -40,23 +40,23 @@ const Piano_Comp = ({ onKeyPress }) => {
 
     const handleGenerateChords = async (e) => {
       setIsPianoDisabled(false);
-      setFormData({
+  
+
+      console.log('error is here: ', playedNotes[0], playedNotes[1], playedNotes[2], playedNotes[3]);
+      
+
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/api/notes', {
         note1: playedNotes[0],
         note2: playedNotes[1],
         note3: playedNotes[2],
-        note4: playedNotes[3],
+        note4: playedNotes[3]
       });
-      setPlayedNotes([]);
-
-      e.preventDefault();
-
-    try {
-      const response = await axios.post('http://localhost:5000/api/notes', formData);
+      
 
 
       if (response.status === 200) {
-        const result = response.data;
-        console.log(result);
+        console.log("this is response:", response);
         // Handle the result as needed
       } else {
         console.error('Failed to fetch');
@@ -65,8 +65,10 @@ const Piano_Comp = ({ onKeyPress }) => {
       console.error('Error:', error);
     }
 
-    };
+    setPlayedNotes([]);
 
+    };
+    
     return (
       <div>
         <DropdownMenu />
