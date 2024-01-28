@@ -40,4 +40,4 @@ def output_midi(midi):
 
     # Export the stream to a MIDI file
     s.write('midi', fp="Chordinator.AI/chordinator-ai/public/output2.mid")
-    return s.write('midi');
+    return s.write('midi', fp="written.mid");

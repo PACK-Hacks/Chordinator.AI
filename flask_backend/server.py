@@ -64,10 +64,10 @@ def notes():
     note_array = [scale_data(x-23)%7 for x in note_array]
     print("here is the real note array", note_array)
     midi_generator(note_array);
-    midi = midi_generator(note_array)
+    midi = "Chordinator.AI/chordinator-ai/public/output2.mid"
     print(midi)
     print('running send file command')
-    return send_file(midi, as_attachment=True, download_name='output.mid')
+    return send_file(midi, as_attachment=True, download_name='generated.mid')
 
     
 
