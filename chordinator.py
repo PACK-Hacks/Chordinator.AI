@@ -1,3 +1,6 @@
+## 
+## THIS FILE CONVERTS THE MIDI FILES IN THE MIDI FILE TO CSV
+##
 import os;
 import re;
 import mido;
