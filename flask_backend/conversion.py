@@ -10,7 +10,6 @@ def note_to_number(note):
         
     }
 
-    # Convert the note to uppercase for case-insensitivity
     uppercase_note = note.upper()
 
     # Check if the note is in the mapping
